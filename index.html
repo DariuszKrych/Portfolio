@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dariusz Krych - Portfolio</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="css/navigation_bar.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <script src="js/navigation_bar.js" async defer> </script>
+
+        <nav>
+            <ul class="sidebar">
+                <img onclick=closeSidebar() id="close_button" src="assets/close_icon.png" height="30" width="30">
+                <li><a href="index.html"><h3>Home</h3></a></li>
+            </ul>
+
+            <ul class="sidebar">
+                <!-- Programming drop downs. -->
+                <li onclick="changeDropDown('.prog_drop', 'prog_closed', 'prog', '.py_drop', 'py_closed', '.web_drop', 'web_closed')">
+                    <a href="javascript:void(0)"><h3>Programming</h3>
+                        <img id="prog_closed" src="assets/drop_down_arrow_icon.png" height="30" width="30">
+                        <img class="prog_drop" src="assets/drop_up_arrow_icon.png" height="30" width="30">
+                    </a>
+                </li>
+            </ul>
+            <ul class="sidebar" id="prog">
+                    <!-- Python sub drop down. -->
+                <li onclick="changeDropDown('.py_drop', 'py_closed')">
+                    <a class="prog_drop" href="javascript:void(0)">Python<img id="py_closed" src="assets/drop_down_arrow_icon.png" height="30" width="30">
+                        <img class="py_drop" src="assets/drop_up_arrow_icon.png" height="30" width="30">
+                    </a>
+                </li>
+                <li>
+                    <a class="py_drop" href="https://github.com/DariuszKrych/Py-Jv_StringMatching.git" target="_blank" rel="noopener noreferrer">
+                        <i>Group Python Project</i>
+                        <img src="assets/open_in_new_icon.png" height="25" width="25">
+                    </a>
+                </li>
+                    <!-- Website sub drop down. -->
+                <li onclick="changeDropDown('.web_drop', 'web_closed')">
+                    <a class="prog_drop" href="javascript:void(0)">HTML & CSS
+                        <img id="web_closed" src="assets/drop_down_arrow_icon.png" height="30" width="30">
+                        <img class="web_drop" src="assets/drop_up_arrow_icon.png" height="30" width="30">
+                    </a>
+                </li>
+                <li>
+                    <a class="web_drop" href="ADD A LINK TO KAIDA WEBSITE REFACTORED AS A CAR WEBSITE" target="_blank" rel="noopener noreferrer">
+                        <i>Vehicle Website&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
+                        <img src="assets/open_in_new_icon.png" height="25" width="25">
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="sidebar">
+                <!-- Academic drop downs. -->
+                <li onclick="changeDropDown('.academic_drop', 'academic_closed', 'academic', '.softdev_drop', 'softdev_closed', '.foundation_ict_drop', 'foundation_ict_closed', '.castletroy_drop', 'castletroy_closed')">
+                    <a href="javascript:void(0)"><h3>Academic Record</h3>
+                        <img id="academic_closed" src="assets/drop_down_arrow_icon.png" height="30" width="30">
+                        <img class="academic_drop" src="assets/drop_up_arrow_icon.png" height="30" width="30">
+                    </a>
+                </li>
+            </ul>
+            <ul class="sidebar" id="academic">
+                    <!-- Bachelors in SD sub drop down. -->
+                <li onclick="changeDropDown('.softdev_drop', 'softdev_closed')">
+                    <a class="academic_drop" href="javascript:void(0)">Bachelors in IT, Software Development (UM)
+                        <img id="softdev_closed" src="assets/drop_down_arrow_icon.png" height="30" width="30">
+                        <img class="softdev_drop" src="assets/drop_up_arrow_icon.png" height="30" width="30">
+                    </a>
+                </li>
+                <li>
+                    <a class="softdev_drop"><i>Viewing details...</i>
+                    </a>
+                </li>
+                    <!-- Foundation in ICT sub drop down. -->
+                <li onclick="changeDropDown('.foundation_ict_drop', 'foundation_ict_closed')">
+                    <a class="academic_drop" href="javascript:void(0)">Foundation in ICT (UM)
+                        <img id="foundation_ict_closed" src="assets/drop_down_arrow_icon.png" height="30" width="30">
+                        <img class="foundation_ict_drop" src="assets/drop_up_arrow_icon.png" height="30" width="30">
+                    </a>
+                </li>
+                <li>
+                    <a class="foundation_ict_drop"><i>Viewing details...</i>
+                    </a>
+                </li>
+                    <!-- Castletroy College sub drop down. -->
+                <li onclick="changeDropDown('.castletroy_drop', 'castletroy_closed')">
+                    <a class="academic_drop" href="javascript:void(0)">Castletroy College
+                        <img id="castletroy_closed" src="assets/drop_down_arrow_icon.png" height="30" width="30">
+                        <img class="castletroy_drop" src="assets/drop_up_arrow_icon.png" height="30" width="30">
+                    </a>
+                </li>
+                <li>
+                    <a class="castletroy_drop"><i>Viewing details...</i>
+                    </a>
+                </li>
+            </ul>
+            <img onclick=showSidebar() id="menu_button" src="assets/menu_icon.png" height="30" width="30">
+        </nav>
+
+        <main>
+        <h1>Dariusz Krych - Online Portfolio</h1>
+        <p>Welcome to my online portfolio. Here, you'll discover my academic results as well as a curated showcase of my programming projects.</p>
+        <p>This website is hosted through my personal GitHub.  Open a drop down in the sidebar to begin viewing a given section.  Enjoy exploring, and stay tuned for updates!</p>
+
+            <!-- Programming info. -->
+            <div class="prog_drop">
+                <div class="main_sub_section">
+                    <h2>Programming</h2>
+                    <p>I have a strong foundation in programming, with hands-on experience in both object oriented programming (OOP) and functional programming (FP) paradigms.  My work in this area has honed my ability to design and implement robust software solutions.</p>
+                </div>
+            </div>
+
+                <!-- Python sub info. -->
+                <div class="py_drop">
+                    <div class="main_sub_section">
+                        <h2>Python</h2>
+                        <p>
+                        In Python, I have developed a range of projects.  
+                        I adhere to best practices, ensuring my code is clean, efficient, and well-documented, which has been vital in both academic and personal projects.  
+                        The most recent project I participated in is linked in the sidebar.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Website sub info. -->
+                <div class="web_drop">
+                    <div class="main_sub_section">
+                        <h2>Website</h2>
+                        <p>
+                        My expertise in HTML and CSS has enabled me to create responsive, user-friendly websites.  
+                        I focus on intuitive design and cross-browser compatibility to deliver engaging digital experiences.  
+                        One of my personal websites is linked in the sidebar.
+                        </p>
+                    </div>
+                </div>
+
+            <!-- Academic info. -->
+            <div class="academic_drop">
+                <div class="main_sub_section">
+                    <h2>Academic Record</h2>
+                    <p>My academic journey has equipped me with a solid foundation in technology and the sciences.  I have excelled in subjects like Mathematics, English, and Physics, which underpin my technical studies and problem-solving abilities.</p>
+                </div>
+            </div>
+
+                <!-- Bachelors in Software Development sub info. -->
+                <div class="softdev_drop">
+                    <div class="main_sub_section">
+                        <img class="institution_logo" src="assets/UMLOGO_red_transparent.png" alt="University of Malta Logo">
+                        <h2>Tertiary Education: Bachelors in Information Technology, Software Development (UM)</h2>
+                        <p>
+                            I am currently enrolled in the BCs in Information Technology, Software Development program at the University of Malta.  
+                            I am currently completing the first of three years.
+                            The course emphasizes advanced programming, system design, and modern computing technologies, bridging theoretical concepts with practical applications.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Foundation in ICT sub info. -->
+                <div class="foundation_ict_drop">
+                    <div class="main_sub_section">
+                        <img class="institution_logo" src="assets/UMLOGO_red_transparent.png" alt="University of Malta Logo">
+                        <h2>Tertiary Education: Foundation in ICT</h2>
+                        <p>The Foundation in ICT program introduced me to key concepts in computer systems, digital literacy, and basic programming.  It served as a critical stepping stone toward more specialized studies in technology and software development.</p>
+
+                        <table border="1">
+                            <tr>
+                              <th><i>Year</i></th>
+                              <th><i>Code</i></th>
+                              <th><i>Study-Unit Title</i></th>
+                              <th><i>%</i></th>
+                              <th><i>Grade</i></th>
+                            </tr>
+                            <tr>
+                                <th>2023/4</th>
+                                <th>CIS0001</th>
+                                <th>Introduction to Information Systems</th>
+                                <th>89</th>
+                                <th>A</th>
+                            </tr>
+                            <tr>
+                                <th>2023/4</th>
+                                <th>ELP1062</th>
+                                <th>English Proficiency</th>
+                                <th>58</th>
+                                <th>C</th>
+                            </tr>
+                            <tr>
+                                <th>2023/4</th>
+                                <th>ELP1063</th>
+                                <th>English Speech Fluency</th>
+                                <th>74</th>
+                                <th>B</th>
+                            </tr>
+                            <tr>
+                                <th>2023/4</th>
+                                <th>ELP1426</th>
+                                <th>English Writing Skills</th>
+                                <th>70</th>
+                                <th>B</th>
+                            </tr>
+                            <tr>
+                                <th>2023/4</th>
+                                <th>FST0412</th>
+                                <th>Introduction to Computer Systems and Programming</th>
+                                <th>74</th>
+                                <th>B</th>
+                            </tr>
+                            <tr>
+                                <th>2023/4</th>
+                                <th>IFS0011</th>
+                                <th>Algebraic Techniques, Trigonometry and Vectors</th>
+                                <th>70</th>
+                                <th>B</th>
+                            </tr>
+                            <tr>
+                                <th>2023/4</th>
+                                <th>IFS0012</th>
+                                <th>Coordinate Geometry, Matrices and Probability</th>
+                                <th>63</th>
+                                <th>C+</th>
+                            </tr>
+                            <tr>
+                                <th>2023/4</th>
+                                <th>IFS0013</th>
+                                <th>Complex Numbers, Functions and Series</th>
+                                <th>65</th>
+                                <th>C+</th>
+                            </tr>
+                            <tr>
+                                <th>2023/4</th>
+                                <th>IFS0014</th>
+                                <th>Calculus and Numerical Methods</th>
+                                <th>45</th>
+                                <th>D</th>
+                            </tr>
+                            <tr>
+                                <th>2023/4</th>
+                                <th>IFS0126</th>
+                                <th>English Grammar and Logic</th>
+                                <th>89</th>
+                                <th>A</th>
+                            </tr>
+                            <tr>
+                                <th>2023/4</th>
+                                <th>IFS0410</th>
+                                <th>Advanced Programming and System Design</th>
+                                <th>74</th>
+                                <th>B</th>
+                            </tr>
+                            <tr>
+                                <th>2023/4</th>
+                                <th>IFS0428</th>
+                                <th>Principles of Motion, Moments and Waves</th>
+                                <th>81</th>
+                                <th>A</th>
+                            </tr>
+                            <tr>
+                                <th>2023/4</th>
+                                <th>IFS0429</th>
+                                <th>Fundamentals of Electrical Circuits and Electromagnetism</th>
+                                <th>76</th>
+                                <th>B+</th>
+                            </tr>
+                            <tr>
+                                <th>2023/4</th>
+                                <th>MNE0001</th>
+                                <th>Introduction to Instrumentation</th>
+                                <th>85</th>
+                                <th>A</th>
+                            </tr>
+                          </table>
+                          
+
+                    </div>
+                </div>
+
+                <!-- Castletroy_drop sub info. -->
+                <div class="castletroy_drop">
+                    <div class="main_sub_section">
+                        <img class="institution_logo" src="assets/CASTLETROY_COLLEGE_logo_transparent.png" alt="Castletroy College Logo">
+                        <h2>Secondary Education: Castletroy College</h2>
+                        <p>During my time at Castletroy College in Ireland, I successfully completed both the Junior and Leaving Certificate programs.  I achieved strong academic results in subjects including English, Mathematics, Science, and Applied Mathematics, which have contributed to my analytical and problem-solving skills.</p>
+                        <table border="1">
+                            <tr>
+                                <th>Leaving Certificate</th>
+                            </tr>
+                            <tr>
+                                <th><i>Level</i></th>
+                                <th><i>Subject</i></th>
+                                <th><i>%</i></th>
+                                <th><i>Grade</i></th>
+                            </tr>
+                            <tr>
+                                <th>Higher</th>
+                                <th>English</th>
+                                <th>(60-70%)</th>
+                                <th>H4</th>
+                            </tr>
+                            <tr>
+                                <th>Higher</th>
+                                <th>Mathematics</th>
+                                <th>(80-90%)</th>
+                                <th>H2</th>
+                            </tr>
+                            <tr>
+                                <th>Higher</th>
+                                <th>Spanish</th>
+                                <th>(70-80%)</th>
+                                <th>H3</th>
+                            </tr>
+                            <tr>
+                                <th>Higher</th>
+                                <th>Applied Mathematics</th>
+                                <th>(60-70%)</th>
+                                <th>H4</th>
+                            </tr>
+                            <tr>
+                                <th>Higher</th>
+                                <th>Physics</th>
+                                <th>(90-100%)</th>
+                                <th>H1</th>
+                            </tr>
+                            <tr>
+                                <th>Higher</th>
+                                <th>Geography</th>
+                                <th>(80-90%)</th>
+                                <th>H2</th>
+                            </tr>
+                        </table>
+                        <br>
+                        <table border="1">
+                            <tr>
+                                <th>Junior Certificate</th>
+                            </tr>
+                            <tr>
+                                <th><i>Level</i></th>
+                                <th><i>Subject</i></th>
+                                <th><i>%</i></th>
+                                <th><i>Grade</i></th>
+                            </tr>
+                            <tr>
+                                <th>Higher</th>
+                                <th>English</th>
+                                <th>(75-90%)</th>
+                                <th>Higher Merit</th>
+                            </tr>
+                            <tr>
+                                <th>Common</th>
+                                <th>Spanish</th>
+                                <th>(75-90%)</th>
+                                <th>Higher Merit</th>
+                            </tr>
+                            <tr>
+                                <th>Common</th>
+                                <th>Science</th>
+                                <th>(75-90%)</th>
+                                <th>Higher Merit</th>
+                            </tr>
+                            <tr>
+                                <th>Common</th>
+                                <th>Business Studies</th>
+                                <th>(75-90%)</th>
+                                <th>Higher Merit</th>
+                            </tr>
+                            <tr>
+                                <th>Higher</th>
+                                <th>Mathematics</th>
+                                <th>(70-85%)</th>
+                                <th>B</th>
+                            </tr>
+                            <tr>
+                                <th>Higher</th>
+                                <th>Geography</th>
+                                <th>(85-100%)</th>
+                                <th>A</th>
+                            </tr>
+                            <tr>
+                                <th>Higher</th>
+                                <th>History</th>
+                                <th>(85-100%)</th>
+                                <th>A</th>
+                            </tr>
+                            <tr>
+                                <th>Higher</th>
+                                <th>Materials technology Wood</th>
+                                <th>(85-100%)</th>
+                                <th>A</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+        </main>
+
+    </body>
+</html>
