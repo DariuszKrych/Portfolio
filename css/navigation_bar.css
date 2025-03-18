@@ -1,0 +1,81 @@
+:root{
+    --myBlack: rgba(3, 1, 6, 0.283);
+    --myPurple: rgba(69, 40, 184, 0.482);
+}
+
+nav{
+    width: 250px;
+    background-color: var(--myBlack);
+    backdrop-filter:blur(1px);
+    box-shadow:3px 3px 5px var(--myPurple);
+    /* border: solid 5px black; */
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+nav ul#prog{
+    gap: 0px;
+}
+
+nav #menu_button{
+    margin: 0;
+    padding: 0;
+    display: none;
+    margin: 0 auto;
+}
+
+nav li a{
+    /* height: 50px; */
+    /* height: fit-content; */
+    padding: 3px 5px;
+    display: flex;
+}
+
+nav ul li a h3{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#close_button{
+    display: flex;
+    margin: 0 auto;
+}
+
+nav a{
+    height: 100%;
+    padding: 20px;
+    width: 220px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+nav img:hover{
+    box-shadow: 7px 7px 7px var(--myPurple) inset,
+    -7px -7px 7px var(--myPurple) inset;
+}
+
+nav a:hover{
+    background-color: var(--myPurple);
+}
+
+.prog_drop, .py_drop, .web_drop, .academic_drop, .softdev_drop, .foundation_ict_drop, .castletroy_drop{
+    display: none;
+}
+
+#prog_closed, #py_closed, #web_closed, #academic_closed, #softdev_closed, #foundation_ict_closed, #castletroy_closed{
+    display: flex;
+}
